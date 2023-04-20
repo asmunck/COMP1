@@ -49,28 +49,38 @@ def calcular_ordenada_segundo_grau(a, b, c, x):
 def calcular_media_ponderada(numero1, peso1, numero2, peso2):
     media_ponderada = (numero1 * peso1 + numero2 * peso2) / (peso1 + peso2)
     return media_ponderada
+  
+# 7. Defina uma função qu calcule o erro entre a soma de uma PG infinita.
+def erro_pg_inifinita(q, n):
+    if q < 0 or q >= 1:
+        return "q deve estar entre 0 e 1."
+    soma_n_termos = (1 - q**n)/(1 - q)
+    soma_infinita = 1/(1 - q)
+    erro = abs(soma_infinita - soma_n_termos)
+    return erro
 
-# 7. Defina uma função para calcular a gorjeta do garçom com base no valor da conta (15% fixo).
+  
+# 8. Defina uma função para calcular a gorjeta do garçom com base no valor da conta (15% fixo).
 def calcular_gorjeta_fixa(valor_conta):
     gorjeta = 0.15 * valor_conta
     return gorjeta
 
-# 8. Defina uma função para calcular a gorjeta do garçom com base no valor da conta e na porcentagem de gorjeta informada.
+# 9. Defina uma função para calcular a gorjeta do garçom com base no valor da conta e na porcentagem de gorjeta informada.
 def calcular_gorjeta(valor_conta, porcentagem_gorjeta):
     gorjeta = porcentagem_gorjeta * valor_conta / 100
     return gorjeta
 
-# 9. Defina uma função para calcular o saldo final de uma conta com base no saldo inicial, número de meses e taxa de juros mensal (juros simples).
+# 10. Defina uma função para calcular o saldo final de uma conta com base no saldo inicial, número de meses e taxa de juros mensal (juros simples).
 def calcular_saldo_final(saldo_inicial, num_meses, taxa_juros_mensal):
     saldo_final = saldo_inicial + (saldo_inicial * taxa_juros_mensal * num_meses)
     return saldo_final
 
-# 10. Função para calcular o saldo final de uma conta com base no saldo inicial, número de meses e taxa de juros mensal (juros simples).
+# 11. Função para calcular o saldo final de uma conta com base no saldo inicial, número de meses e taxa de juros mensal (juros simples).
 def calcular_saldo_final(saldo_inicial, num_meses, taxa_juros_mensal):
     saldo_final = saldo_inicial + (saldo_inicial * taxa_juros_mensal * num_meses)
     return saldo_final
 
-# 11. Definir uma função que calcule a distância na qual a correnteza arrasta um barco que atravessa o rio.
+# 12. Definir uma função que calcule a distância na qual a correnteza arrasta um barco que atravessa o rio.
 import math
 
 def calcular_distancia_correnteza(velocidade_correnteza, largura_rio, velocidade_barco):
